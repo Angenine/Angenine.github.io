@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/tasks.js" defer></script>
+    <script src="assets/js/counter.js" defer></script>
+    <title> Pomodoro Timer - 0 Pomodoros </title>
+</head>
+<body>
+    <div class="image-effect">
+        <section class="container">
+            <section class="container-timer">
+                <div>
+                    <button id="pomodoro" onclick="selectTimer('pomodoro')" class="modality active-button" type="button">Pomodoro</button>
+                    <button id="short-break" onclick="selectTimer('short-break')" class="modality" type="button">Intervalo Curto</button>
+                    <button id="long-break" onclick="selectTimer('long-break')" class="modality" type="button">Intervalo Longo</button>
+                </div>
+                <div>
+                    <p id="counter">25:00</p>
+                </div>
+                <div>
+                    <button id="start" class="start" type="button">Começar</button>
+                </div>
+                <div class="button-group">
+                    <button id="pause" class="pause" type="button">Pausar</button>
+                    <button id="restart" class="restart" type="button">Recomeçar</button>
+                </div>    
+            </section>
+            <div class="divider"></div>
+            <section class="tasks">
+                <div>
+                    <h1>Tarefas</h1>
+                    <form id="task-form">
+                        <input id="new-task" type="text" placeholder="Adicione uma nova tarefa" />
+                        <button id="add-task" type="button">+</button>
+                    </form>
+                </div>
+                <div class="tasks-list">
+                    <ol id="tasks"></ol>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <audio id="end-sound" src="assets/sounds/clock-alarm-8761.mp3" preload="auto"></audio>
+</body>
+</html>
